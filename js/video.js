@@ -43,14 +43,15 @@ window.addEventListener("load", function() {
 	});
 
 	document.querySelector("#mute").addEventListener("click", function() {
-		if (video.volume == 0) {
+		video.muted = !video.muted
+		if (video.muted == 0) {
 			console.log("Unmute");
-			video.volume = 1;
+			// video.volume = 1;
 			this.textContent = "Mute";
 		}
 		else {
 			console.log("Mute")
-			video.volume = 0;
+			// video.volume = 0;
 			this.textContent = "Unmute";
 		}
 	});
